@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float total = 0;
+
+    do {
+        printf("\n1 - R$0,50 | 2 - R$1,00 | 3 - R$2,00 | 0 - Parar\n");
+        printf("Escolha a moeda: ");
+        scanf("%d", &opcao);
+        
+//O do while (condição); é um laço que executa o bloco primeiro e só depois testa a condição. Ele garante que o bloco rode pelo menos uma vez.//
+
+        switch (opcao) {
+      
+            case 1:
+                total += 0.50;
+                break;
+            case 2:
+                total += 1.00;
+                break;
+            case 3:
+                total += 2.00;
+                break;
+            case 0:
+                break;
+            default:
+                printf("Opcao invalida!\n");
+                continue;
+        }
+
+        if (opcao != 0) {
+            printf("Saldo atual: R$%.2f\n", total);
+        }
+    } while (opcao != 0);
+
+    printf("\nTotal acumulado: R$%.2f\n", total);
+
+    return 0;
+}
