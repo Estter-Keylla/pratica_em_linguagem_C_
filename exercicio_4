@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int passos, total_passos = 0, horas = 0;
+
+    while (total_passos < 10000) {
+        printf("Passos dados na hora %d: ", horas + 1);
+        scanf("%d", &passos);
+        total_passos += passos;
+        horas++;
+    }
+
+    printf("Meta atingida com %d passos.\n", total_passos);
+    printf("Horas necessarias: %d\n", horas);
+
+    return 0;
+}
